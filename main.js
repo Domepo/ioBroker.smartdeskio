@@ -10,7 +10,6 @@ const utils = require("@iobroker/adapter-core");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
-
 class Smartdeskio extends utils.Adapter {
 
 	/**
@@ -44,10 +43,14 @@ class Smartdeskio extends utils.Adapter {
 		Here a simple template for a boolean variable named "testVariable"
 		Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
 		*/
+		setTimeout(function(){ 
+			var zahl = zahl + 1;
+		}, 3000);
+
 		await this.setObjectNotExistsAsync("testVariable", {
 			type: "state",
 			common: {
-				name: "dasisteintest",
+				name: zahl,
 				type: "boolean",
 				role: "indicator",
 				read: true,
