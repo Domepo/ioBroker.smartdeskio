@@ -43,14 +43,16 @@ class Smartdeskio extends utils.Adapter {
 		Here a simple template for a boolean variable named "testVariable"
 		Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
 		*/
-		setTimeout(function(){ 
-			var zahl = zahl + 1;
-		}, 3000);
+		var zahl; 
 
+		let test = function(){    
+			zahl = zahl + 1;
+			return zahl;
+		}
 		await this.setObjectNotExistsAsync("testVariable", {
 			type: "state",
 			common: {
-				name: zahl,
+				name: setInterval(function(){return test(); }, 100);,
 				type: "boolean",
 				role: "indicator",
 				read: true,
