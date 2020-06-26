@@ -1,0 +1,79 @@
+{
+	"common": {
+		"name": "smartdeskio",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "SmartDesk",
+		"titleLang": {
+			"en": "SmartDesk",
+			"de": "SmartDesk",
+			"ru": "SmartDesk",
+			"pt": "SmartDesk",
+			"nl": "SmartDesk",
+			"fr": "SmartDesk",
+			"it": "SmartDesk",
+			"es": "SmartDesk",
+			"pl": "SmartDesk",
+			"zh-cn": "SmartDesk"
+		},
+		"desc": {
+			"en": "smartdeskio",
+			"de": "smartdeskio",
+			"ru": "smartdeskio",
+			"pt": "smartdeskio",
+			"nl": "smartdeskio",
+			"fr": "smartdeskio",
+			"it": "smartdeskio",
+			"es": "smartdeskio",
+			"pl": "smartdeskio",
+			"zh-cn": "smartdeskio"
+		},
+		"authors": [
+			"Domepo <dominiktb2@gmail.com>"
+		],
+		"keywords": [
+			"ioBroker",
+			"template",
+			"Smart Home",
+			"home automation"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "smartdeskio.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/Domepo/ioBroker.smartdeskio/master/admin/smartdeskio.png",
+		"readme": "https://github.com/Domepo/ioBroker.smartdeskio/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "infrastructure",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"materialize": true,
+		"dependencies": [
+			{
+				"js-controller": ">=1.4.2"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": []
+}
