@@ -18,11 +18,14 @@
 	<script type="text/javascript" src="words.js"></script>
 
 	<script type="text/javascript">
+
 		// This will be called by the admin adapter when the settings page loads
 		function load(settings, onChange) {
+
 			// example: select elements with id=key and class=value and insert value
 			if (!settings) return;
 			$('.value').each(function () {
+
 				var $key = $(this);
 				var id = $key.attr('id');
 				if ($key.attr('type') === 'checkbox') {
@@ -82,7 +85,7 @@
 
 			<div class="col s6 input-field">
 				<input type="text" class="value" id="option2" />
-				<label for="option2" class="translate">option2</label>
+				<label for="option2" class="translate">option2 skur</label>
 			</div>
 		</div>
 
