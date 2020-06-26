@@ -47,7 +47,7 @@ class Smartdeskio extends utils.Adapter {
 		await this.setObjectNotExistsAsync("testVariable", {
 			type: "state",
 			common: {
-				name: "testVariable",
+				name: "dasisteintest",
 				type: "boolean",
 				role: "indicator",
 				read: true,
