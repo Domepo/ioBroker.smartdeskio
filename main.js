@@ -8,7 +8,7 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 
-var can = require('/home/pi/node_modules/socketcan');
+var can = require('/home/pi/node_modules/socketcan/socketcan.js');
 //our canbus is the can0
 var channel = can.createRawChannel("can0", true);
 
