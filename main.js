@@ -12,10 +12,15 @@ const utils = require("@iobroker/adapter-core");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
+
+const can = require("socketcan");
+
+let channel = can.createRawChannel("can0", true);
+
 class Smartdeskio extends utils.Adapter {
 
-	var can = require('socketcan');
-	
+
+
 	/**
 	 * @param {Partial<utils.AdapterOptions>} [options={}]
 	 */
@@ -38,7 +43,7 @@ class Smartdeskio extends utils.Adapter {
 	async onReady() {
 
 
-		var channel = can.createRawChannel("can0", true);
+
 
 		// Initialize your adapter here
 		channel.start();
