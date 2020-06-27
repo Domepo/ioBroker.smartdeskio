@@ -9,6 +9,7 @@
 const utils = require("@iobroker/adapter-core");
 
 var can = require('socketcan');
+const { strict } = require("assert");
 //our canbus is the can0
 var channel = can.createRawChannel("can0", true);
 
@@ -35,7 +36,7 @@ class Smartdeskio extends utils.Adapter {
 	/**
 	 * Is called when databases are connected and adapter received configuration.
 	 */
-	channel.start();
+
 	async onReady() {
 		// Initialize your adapter here
 
@@ -43,9 +44,9 @@ class Smartdeskio extends utils.Adapter {
 		// this.config:
 		this.log.info("testtest");
 		channel.addListener("onMessage", function(msg) { 
-			this.log.info("config option1: " + msg.id);
-		} );
-
+			this.log.info("config option1: " + String(msg.id));
+		} );	
+		channel.start();
 
 		/*
 		For every state in the system there has to be also an object of type state
