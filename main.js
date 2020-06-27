@@ -35,16 +35,17 @@ class Smartdeskio extends utils.Adapter {
 	/**
 	 * Is called when databases are connected and adapter received configuration.
 	 */
+	channel.start();
 	async onReady() {
 		// Initialize your adapter here
 
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
-
+		this.log.info("testtest");
 		channel.addListener("onMessage", function(msg) { 
 			this.log.info("config option1: " + msg.id);
 		} );
-		channel.start();
+
 
 		/*
 		For every state in the system there has to be also an object of type state
