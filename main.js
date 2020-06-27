@@ -94,12 +94,7 @@ class Smartdeskio extends utils.Adapter {
 
 		// same thing, but the value is flagged "ack"
 		// ack should be always set to true if the value is received from or acknowledged from the target system
-		if(msg.id == 96){
-		await this.setStateAsync("testVariable", { val:true, ack: true });
-		}
-		if(msg.id == 112){
-			await this.setStateAsync("testVariable", { val:false, ack: true });
-			}
+		await this.setStateAsync("testVariable", { val: msg.id, ack: true });
 
 
 		// // examples for the checkPassword/checkGroup functions
