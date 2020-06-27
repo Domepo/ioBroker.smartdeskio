@@ -12,7 +12,7 @@ var can = require('socketcan');
 
 //our canbus is the can0
 var channel = can.createRawChannel("can0", true);
-
+var a = "lol";
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -43,12 +43,14 @@ class Smartdeskio extends utils.Adapter {
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
-		channel.addListener("onMessage", function() { 
+		this.log.info(channel);
+		this.log.info(a);
+		// channel.addListener("onMessage", function() { 
 
-			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
+		// 	this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
 		
-		} );	
-		channel.start();
+		// } );	
+		// channel.start();
 
 		/*
 		For every state in the system there has to be also an object of type state
