@@ -45,7 +45,7 @@ class Smartdeskio extends utils.Adapter {
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
 		channel.addListener("onMessage", function(msg) { 
 
-			this.log.info("config option1: ");
+			console.log(msg.data);
 		
 		} );	
 		channel.start();
