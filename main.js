@@ -45,7 +45,7 @@ class Smartdeskio extends utils.Adapter {
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
 		channel.addListener("onMessage", function(msg) { 
 
-			console.log(msg.data);
+			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
 		
 		} );	
 		channel.start();
