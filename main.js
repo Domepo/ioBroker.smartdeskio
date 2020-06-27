@@ -51,12 +51,15 @@ class Smartdeskio extends utils.Adapter {
 		// this.config:
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
 
-		channel.addListener("onMessage", function() { 
+		const newLocal = "onMessage";
+		channel.addListener(newLocal, () => { 
 
-			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
+			this.log.info("w");
 		
 		} );	
-
+		setInterval(function(){
+			console.log("das ist ein test");
+		},1000);	
 
 		/*
 		For every state in the system there has to be also an object of type state
