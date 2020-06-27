@@ -52,11 +52,11 @@ class Smartdeskio extends utils.Adapter {
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
 
 		const newLocal = "onMessage";
-		channel.addListener(newLocal, (msg) => { 
+		channel.addListener(newLocal, async (msg) => { 
 
-			this.log.info(msg.id);
+			
 		
-		} );	
+			
 
 		/*
 		For every state in the system there has to be also an object of type state
@@ -69,7 +69,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: String(1231),
+				name: msg.id,
 				type: "boolean",
 				role: "indicator",
 				read: true,
@@ -77,6 +77,7 @@ class Smartdeskio extends utils.Adapter {
 			},
 			native: {},
 		});
+	} );
 
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("testVariable");
