@@ -8,11 +8,7 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 
-var can = require('socketcan');
 
-//our canbus is the can0
-var channel = can.createRawChannel("can0", true);
-var a = "lol";
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -38,19 +34,22 @@ class Smartdeskio extends utils.Adapter {
 	 */
 
 	async onReady() {
-		// Initialize your adapter here
+		var can = require('socketcan');
 
+		var channel = can.createRawChannel("can0", true);
+
+		// Initialize your adapter here
+		channel.start();
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
-		this.log.info(channel);
-		this.log.info(a);
-		// channel.addListener("onMessage", function() { 
 
-		// 	this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
+		channel.addListener("onMessage", function() { 
+
+			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
 		
-		// } );	
-		// channel.start();
+		} );	
+
 
 		/*
 		For every state in the system there has to be also an object of type state
