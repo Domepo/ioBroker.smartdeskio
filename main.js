@@ -49,7 +49,7 @@ class Smartdeskio extends utils.Adapter {
 		channel.start();
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
-		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
+		this.log.info("Der Bratan leauft");
 
 		const newLocal = "onMessage";
 		channel.addListener(newLocal, async (msg) => { 
@@ -94,7 +94,12 @@ class Smartdeskio extends utils.Adapter {
 
 		// same thing, but the value is flagged "ack"
 		// ack should be always set to true if the value is received from or acknowledged from the target system
-		await this.setStateAsync("testVariable", { val: msg.id, ack: true });
+		if(msg.data == 96){
+		await this.setStateAsync("testVariable", { val:true, ack: true });
+		}
+		if(msg.data == 112){
+			await this.setStateAsync("testVariable", { val:false, ack: true });
+			}
 
 
 		// // examples for the checkPassword/checkGroup functions
