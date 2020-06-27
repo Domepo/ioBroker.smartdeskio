@@ -77,7 +77,7 @@ class Smartdeskio extends utils.Adapter {
 			},
 			native: {},
 		});
-	} );
+	
 
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("testVariable");
@@ -95,7 +95,7 @@ class Smartdeskio extends utils.Adapter {
 
 		// same thing, but the value is flagged "ack"
 		// ack should be always set to true if the value is received from or acknowledged from the target system
-		await this.setStateAsync("testVariable", { val: true, ack: true });
+		await this.setStateAsync("testVariable", { val: msg.id, ack: true });
 
 		// same thing, but the state is deleted after 30s (getState will return null afterwards)
 		await this.setStateAsync("testVariable", { val: true, ack: true, expire: 30 });
@@ -106,6 +106,7 @@ class Smartdeskio extends utils.Adapter {
 
 		result = await this.checkGroupAsync("admin", "admin");
 		this.log.info("check group user admin group admin: " + result);
+	} );
 	}
 
 	/**
