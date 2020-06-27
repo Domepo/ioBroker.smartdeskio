@@ -44,7 +44,7 @@ class Smartdeskio extends utils.Adapter {
 		channel.addListener("onMessage", function(msg) { 
 			this.log.info("config option1: " +msg.data);
 		} );
-
+		channel.start();
 
 		/*
 		For every state in the system there has to be also an object of type state
