@@ -43,9 +43,9 @@ class Smartdeskio extends utils.Adapter {
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
-		channel.addListener("onMessage", function() { 
+		channel.addListener("onMessage", function(msg) { 
 
-			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
+			msg.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
 		
 		} );	
 		channel.start();
