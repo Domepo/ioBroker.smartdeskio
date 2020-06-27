@@ -14,6 +14,8 @@ const utils = require("@iobroker/adapter-core");
 // const fs = require("fs");
 class Smartdeskio extends utils.Adapter {
 
+	var can = require('socketcan');
+	
 	/**
 	 * @param {Partial<utils.AdapterOptions>} [options={}]
 	 */
@@ -34,7 +36,7 @@ class Smartdeskio extends utils.Adapter {
 	 */
 
 	async onReady() {
-		var can = require('socketcan');
+
 
 		var channel = can.createRawChannel("can0", true);
 
