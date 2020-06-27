@@ -8,9 +8,9 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 
-const can = require('socketcan');
+var can = require('socketcan');
 //our canbus is the can0
-const channel = can.createRawChannel("can0", true);
+var channel = can.createRawChannel("can0", true);
 
 
 // Load your modules here, e.g.:
@@ -40,13 +40,12 @@ class Smartdeskio extends utils.Adapter {
 
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
-		channel.addListener("onMessage", function(msg) {
 
-		this.log.info("config option1: " + msg.data);
 
-	} );
+		this.log.info("config option1: " +" msg.data");
+		this.log.info("config option2: " + this.config.option2);
 
-		channel.start();
+
 		/*
 		For every state in the system there has to be also an object of type state
 		Here a simple template for a boolean variable named "testVariable"
@@ -58,7 +57,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: "dit is n test",
+				name: String(1231),
 				type: "boolean",
 				role: "indicator",
 				read: true,
