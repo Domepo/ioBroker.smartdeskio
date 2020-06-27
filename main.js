@@ -9,7 +9,7 @@
 const utils = require("@iobroker/adapter-core");
 
 var can = require('socketcan');
-const { strict } = require("assert");
+
 //our canbus is the can0
 var channel = can.createRawChannel("can0", true);
 
@@ -43,9 +43,9 @@ class Smartdeskio extends utils.Adapter {
 		// The adapters config (in the instance object everything under the attribute "native") is accessible via
 		// this.config:
 		this.log.info("testtessadfsdfsdfsdfsdfsdfsdft");
-		channel.addListener("onMessage", function(msg) { 
+		channel.addListener("onMessage", function() { 
 
-			msg.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
+			this.log.info("wileutweiurwieurwiehrwiurhwiuehriwurehiwureoiwuehriwuehriwuorehwiour");
 		
 		} );	
 		channel.start();
