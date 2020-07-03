@@ -5,7 +5,8 @@ let create_multiple_form_box = function(id,class_name){
     console.log(class_name);      
     //create a input box
     let form_box_input = document.createElement('input'); 
-    let iobroker_html_input_row = document.getElementsByClassName("col s6 input-field");
+    
+    let iobroker_html_input_row = document.getElementById("testtest");
 
     //<input id="0" class="itemFormBox">
     form_box_input.setAttribute("id", id);
