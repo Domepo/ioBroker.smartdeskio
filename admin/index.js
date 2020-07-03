@@ -26,6 +26,8 @@ window.addEventListener("load",function(){
     //button for input box creator
     let show_all_inputs_button = document.getElementById("n_input_button");
 
+    
+
     show_all_inputs_button.addEventListener("click",function(){
     
     //remove all form_box_class_name -> provide infinte loop
