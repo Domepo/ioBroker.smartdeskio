@@ -5,6 +5,7 @@ let create_multiple_form_box = function(id,class_name){
     console.log(class_name);      
     //create a input box
     let form_box_input = document.createElement('input'); 
+    let iobroker_html_input_row = document.getElementsByClassName("col s6 input-field");
 
     //<input id="0" class="itemFormBox">
     form_box_input.setAttribute("id", id);
@@ -15,8 +16,8 @@ let create_multiple_form_box = function(id,class_name){
     create_multiple_form_box_space.setAttribute("class",class_name);
 
     //append formbox to body
-    document.body.appendChild(form_box_input);   
-    document.body.appendChild(create_multiple_form_box_space)
+    iobroker_html_input_row.appendChild(form_box_input);   
+    iobroker_html_input_row.appendChild(create_multiple_form_box_space)
                           
 
 }
@@ -26,7 +27,6 @@ window.addEventListener("load",function(){
     //button for input box creator
     let show_all_inputs_button = document.getElementById("n_input_button");
 
-    
 
     show_all_inputs_button.addEventListener("click",function(){
     
