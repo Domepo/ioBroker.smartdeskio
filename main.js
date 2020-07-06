@@ -54,7 +54,7 @@ class Smartdeskio extends utils.Adapter {
 		const newLocal = "onMessage";
 		channel.addListener(newLocal, async (msg) => { 
 
-			//this.log.info(msg.id);
+			this.log.info(msg.id);
 		
 			
 
