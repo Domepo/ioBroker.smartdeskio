@@ -69,8 +69,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: "S",
-				name: "a",
+				name: String(msg.data),
 				type: "boolean",
 				role: "indicator",
 				read: true,
