@@ -69,7 +69,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: String(msg.id),
+				//name: String(msg.id),
 				name:"nö",
 				type: "boolean",
 				role: "indicator",
@@ -95,8 +95,8 @@ class Smartdeskio extends utils.Adapter {
 
 		// same thing, but the value is flagged "ack"
 		// ack should be always set to true if the value is received from or acknowledged from the target system
-		
-		await this.setStateAsync("testVariable", { val: msg.data, ack: true });
+		let ar = [1,1,1,0,1,0,0,1];
+		await this.setStateAsync("testVariable", { val: ar, ack: true });
 
 
 		// // examples for the checkPassword/checkGroup functions
