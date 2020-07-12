@@ -70,7 +70,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: String(msg.id),
+				name: CanID,
 				type: "boolean",
 				role: "indicator",
 				read: true,
