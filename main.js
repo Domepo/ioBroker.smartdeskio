@@ -70,7 +70,7 @@ class Smartdeskio extends utils.Adapter {
 
 			type: "state",
 			common: {
-				name: jsons['data'],
+				name: String(msg.id),
 				type: "boolean",
 				role: "indicator",
 				read: true,
