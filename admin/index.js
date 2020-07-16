@@ -118,6 +118,8 @@ window.addEventListener("load",function(){
         master_name_field.setAttribute("id","master-name-field"+counter);
         master_id_field.setAttribute("id","master-id-field"+counter);
 
+        master_id_field.setAttribute("class","value");
+
         n_filter.setAttribute("type","number");
         n_filter.setAttribute("class","n_filter_style")
         n_filter.setAttribute("id","n-filter"+counter);
