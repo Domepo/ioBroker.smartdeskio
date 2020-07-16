@@ -2,13 +2,15 @@
 // col s12
 var can_frontend_io = document.createElement("div");
 
-document.querySelector(".m adapter-container").appendChild(can_frontend_io);
+
 
 
 var count = 0;
 
 window.addEventListener("load",function(){
 
+    document.querySelector(".m adapter-container").appendChild(can_frontend_io);
+    
     function create_radio_box(){
 
         
