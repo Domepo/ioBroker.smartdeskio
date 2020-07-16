@@ -53,7 +53,7 @@
 			$('.value').each(function () {
 				var $this = $(this);
 				if ($this.attr('type') === 'radio') {
-					obj[$this.attr('id')] = $this.prop('checked');
+					obj[$this.attr('id')] = $this.prop('true');
 				} else {
 					obj[$this.attr('id')] = $this.val();
 				}
