@@ -8,8 +8,6 @@ var count = 0;
 
 window.addEventListener("load",function(){
 
-    can_frontend_io.setAttribute("class","row iframe");
-
     function create_radio_box(){
 
         
