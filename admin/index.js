@@ -2,7 +2,8 @@
 // col s12
 var can_frontend_io = document.createElement("div");
 
-document.getElementsByClassName("m adapter-container")[0].appendChild(can_frontend_io);
+document.querySelector(".m adapter-container").appendChild(can_frontend_io);
+
 
 var count = 0;
 
