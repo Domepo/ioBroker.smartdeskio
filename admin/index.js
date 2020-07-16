@@ -1,6 +1,5 @@
 "use strict";
 // col s12
-var can_frontend_io = document.createElement("div");
 var count = 0;
 
 window.addEventListener("load",function(){
@@ -29,9 +28,7 @@ window.addEventListener("load",function(){
         label_for_send_button.setAttribute("for","radio_send_button");
         label_for_recieve_button.setAttribute("for","radio_recieve_button");
 
-
-        document.body.appendChild(can_frontend_io);
-        can_frontend_io.appendChild(create_div_for_radio_box); 
+        document.body.appendChild(create_div_for_radio_box); 
         create_div_for_radio_box.appendChild(label_for_send_button);
         create_div_for_radio_box.appendChild(radio_send_button); 
         create_div_for_radio_box.appendChild(label_for_recieve_button);
@@ -118,7 +115,7 @@ window.addEventListener("load",function(){
 
         ready_button.setAttribute("id","ready-button"+counter);
 
-        can_frontend_io.appendChild(field_for_id_and_master);
+        document.body.appendChild(field_for_id_and_master);
 
         field_for_id_and_master.appendChild(bracket);
         field_for_id_and_master.appendChild(label_for_id_field);
@@ -178,7 +175,7 @@ window.addEventListener("load",function(){
         add_button.setAttribute("class","more_class");
         add_button.setAttribute("id","more-id");
 
-        can_frontend_io.appendChild(add_button);
+        document.body.appendChild(add_button);
 
         add_button.innerHTML = "More";
 
@@ -219,7 +216,7 @@ window.addEventListener("load",function(){
         filter_box_id.setAttribute("id",master_identifier+"id_name"+id_n);
 
 
-        can_frontend_io.appendChild(filter_div);
+        document.body.appendChild(filter_div);
         filter_div.appendChild(label_for_filter_name);
         filter_div.appendChild(filter_box_name);
         filter_div.appendChild(label_for_filter_id);
