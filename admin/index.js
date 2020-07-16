@@ -9,8 +9,8 @@ var count = 0;
 
 window.addEventListener("load",function(){
 
-    document.querySelector(".m adapter-container").appendChild(can_frontend_io);
-    
+
+
     function create_radio_box(){
 
         
@@ -35,8 +35,7 @@ window.addEventListener("load",function(){
         label_for_send_button.setAttribute("for","radio_send_button");
         label_for_recieve_button.setAttribute("for","radio_recieve_button");
 
-
-        document.body.appendChild(can_frontend_io);
+        document.querySelector(".m adapter-container").appendChild(can_frontend_io);
         can_frontend_io.appendChild(create_div_for_radio_box); 
         create_div_for_radio_box.appendChild(label_for_send_button);
         create_div_for_radio_box.appendChild(radio_send_button); 
