@@ -25,13 +25,10 @@ window.addEventListener("load",function(){
 
 
         create_div_for_radio_box.setAttribute("id","radio-boxes");
-        create_div_for_radio_box.setAttribute("class","radio-boxes-style");
+        create_div_for_radio_box.setAttribute("class","value");
 
         radio_send_button.setAttribute("type","radio");
         radio_recieve_button.setAttribute("type","radio");
-
-        radio_recieve_button.setAttribute("class","value");
-        radio_send_button.setAttribute("class","value");
 
         radio_recieve_button.setAttribute("name","recieve_and_send_radio");
         radio_send_button.setAttribute("name","recieve_and_send_radio");
