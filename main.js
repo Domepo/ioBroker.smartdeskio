@@ -78,7 +78,7 @@ class Smartdeskio extends utils.Adapter {
 			},
 			native: {},
 		});
-	
+		
 
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("testVariable");
