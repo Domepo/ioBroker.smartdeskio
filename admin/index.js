@@ -1,13 +1,13 @@
 "use strict";
 
 var can_frontend_io = document.createElement("div");
-let count = 0;
+var count = 0;
 window.addEventListener("load",function(){
 
     function create_radio_box(){
 
         
-        let create_div_for_radio_box    = document.createElement("div"),    
+        var create_div_for_radio_box    = document.createElement("div"),    
             radio_send_button           = document.createElement("input"),
             radio_recieve_button        = document.createElement("input"),
             label_for_send_button       = document.createElement("label"),
@@ -44,7 +44,7 @@ window.addEventListener("load",function(){
     //get input data
     function get_radio_data(callback){
 
-        let box_listener = document.getElementById("radio-boxes");
+        var box_listener = document.getElementById("radio-boxes");
 
         box_listener.addEventListener("click",  ()=>  {
 
@@ -89,7 +89,7 @@ window.addEventListener("load",function(){
 
 
         
-        let field_for_id_and_master = document.createElement("div"),
+        var field_for_id_and_master = document.createElement("div"),
             master_id_field         = document.createElement("input"),
             master_name_field       = document.createElement("input"),
             label_for_id_field      = document.createElement("label"),
@@ -150,14 +150,14 @@ window.addEventListener("load",function(){
             removeClass(document.querySelectorAll(".more_class") );
 
 
-            let get_n_filter_value = document.getElementById("n-filter"+counter).value;
+            var get_n_filter_value = document.getElementById("n-filter"+counter).value;
 
-            for(let i=0;i<get_n_filter_value;i++){
+            for(var i=0;i<get_n_filter_value;i++){
                 create_filter_box(get_n_filter_value,i,i,i,counter);
             }
             //if there is more than one object
 
-            let int_get_n_filter_value = parseInt(get_n_filter_value);
+            var int_get_n_filter_value = parseInt(get_n_filter_value);
             //show "more" only if there is any value
             if(int_get_n_filter_value > 0){
                 document.getElementById("ready-button"+counter).disabled = true;  
@@ -171,7 +171,7 @@ window.addEventListener("load",function(){
 
     function add_obj(){
 
-        let add_border                  = document.createElement("div"),
+        var add_border                  = document.createElement("div"),
         add_button                      = document.createElement("button");
 
         add_button.setAttribute("class","more_class");
@@ -182,7 +182,7 @@ window.addEventListener("load",function(){
         add_button.innerHTML = "More";
 
 
-        let master_more_button = document.getElementById("more-id");
+        var master_more_button = document.getElementById("more-id");
         master_more_button.addEventListener("click",()=>{
 
             count++;
@@ -202,7 +202,7 @@ window.addEventListener("load",function(){
             master_identifier = 0;
         }
 
-        let filter_div                  = document.createElement("div"),
+        var filter_div                  = document.createElement("div"),
         filter_box_name                 = document.createElement("input"),
         filter_box_id                   = document.createElement("input"),
         label_for_filter_name           = document.createElement("label"),
