@@ -1,7 +1,8 @@
 "use strict";
 
 var can_frontend_io = document.createElement("div");
-
+// value attr for save
+can_frontend_io.setAttribute("class","value");
 
 
 
