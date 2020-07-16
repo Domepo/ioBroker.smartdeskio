@@ -2,7 +2,7 @@
 
 var can_frontend_io = document.createElement("div");
 // value attr for save
-can_frontend_io.setAttribute("class","value");
+
 
 
 
@@ -29,6 +29,10 @@ window.addEventListener("load",function(){
 
         radio_send_button.setAttribute("type","radio");
         radio_recieve_button.setAttribute("type","radio");
+
+        radio_recieve_button.setAttribute("class","value");
+        radio_send_button.setAttribute("class","value");
+
         radio_recieve_button.setAttribute("name","recieve_and_send_radio");
         radio_send_button.setAttribute("name","recieve_and_send_radio");
 
