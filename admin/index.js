@@ -1,6 +1,6 @@
 "use strict";
 
-const can_frontend_io = document.createElement("div");
+var can_frontend_io = document.createElement("div");
 let count = 0;
 window.addEventListener("load",function(){
 
