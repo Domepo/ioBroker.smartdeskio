@@ -1,7 +1,11 @@
 "use strict";
-
+// col s12
 var can_frontend_io = document.createElement("div");
+var col_s12 = document.getElementsByClassName("col s12")[0];
+
+col_s12.appendChild(can_frontend_io);
 var count = 0;
+
 window.addEventListener("load",function(){
 
     can_frontend_io.setAttribute("class","row iframe");
