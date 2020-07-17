@@ -11,7 +11,6 @@ tt.setAttribute("id","tt-input");
 
 var count = 0;
 
-window.addEventListener("load",function(){
 
     document.querySelector(".col.s6.input-field").appendChild(can_frontend_io);
     document.querySelector(".col.s6.input-field").appendChild(tt);
@@ -248,4 +247,3 @@ window.addEventListener("load",function(){
     create_radio_box();
     get_radio_data(create_id_name_master_field);
 
-}); 
