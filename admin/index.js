@@ -1,15 +1,19 @@
 "use strict";
 
-var can_frontend_io = document.createElement("div");
-// value attr for save
-
-let tt = document.createElement("input");
-tt.setAttribute("type","text");
-tt.setAttribute("class","vlaue");
-tt.setAttribute("id","tt-input");
 
 
 var count = 0;
+
+window.addEventListener("load",function(){
+
+    var can_frontend_io = document.createElement("div");
+    // value attr for save
+    
+    let tt = document.createElement("input");
+    tt.setAttribute("type","text");
+    tt.setAttribute("class","vlaue");
+    tt.setAttribute("id","tt-input");
+
 
 
     document.querySelector(".col.s6.input-field").appendChild(can_frontend_io);
@@ -247,3 +251,4 @@ var count = 0;
     create_radio_box();
     get_radio_data(create_id_name_master_field);
 
+}); 
