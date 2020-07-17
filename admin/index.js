@@ -13,8 +13,8 @@ var count = 0;
 
 window.addEventListener("load",function(){
 
-    document.querySelector(".adapter-body").appendChild(can_frontend_io);
-    document.querySelector(".adapter-body").appendChild(tt);
+    document.querySelector(".row").appendChild(can_frontend_io);
+    document.querySelector(".row").appendChild(tt);
 
 
 
