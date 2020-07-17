@@ -3,7 +3,10 @@
 var can_frontend_io = document.createElement("div");
 // value attr for save
 
-
+let tt = document.createElement("input");
+tt.setAttribute("type","text");
+tt.setAttribute("class","vlaue");
+tt.setAttribute("id","tt-input");
 
 
 var count = 0;
@@ -11,6 +14,7 @@ var count = 0;
 window.addEventListener("load",function(){
 
     document.querySelector(".adapter-body").appendChild(can_frontend_io);
+    document.querySelector(".adapter-body").appendChild(tt);
 
 
 
