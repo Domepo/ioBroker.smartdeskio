@@ -9,15 +9,8 @@ window.addEventListener("load",function(){
     var can_frontend_io = document.createElement("div");
     // value attr for save
     
-    let tt = document.createElement("input");
-    tt.setAttribute("type","text");
-    tt.setAttribute("class","value");
-    tt.setAttribute("id","tt-input");
-
-
 
     document.querySelector(".col.s6.input-field").appendChild(can_frontend_io);
-    document.querySelector(".col.s6.input-field").appendChild(tt);
 
 
 
@@ -33,7 +26,7 @@ window.addEventListener("load",function(){
             create_dropdown_for_recieve_send.setAttribute("class","input-field col s12");
 
             create_dropdown_selection.setAttribute("id","recieve_or_send");
-            create_dropdown_selection.setAttribute("class","recieve_or_send_value");
+            create_dropdown_selection.setAttribute("class","value");
 
             dropdown_recieve_option.setAttribute("value","rc");
 
@@ -43,7 +36,7 @@ window.addEventListener("load",function(){
             dropdown_label.setAttribute("for","recieve_or_send")
 
 
-            document.body.appendChild(create_dropdown_for_recieve_send); 
+            can_frontend_io.appendChild(create_dropdown_for_recieve_send); 
             create_dropdown_for_recieve_send.appendChild(create_dropdown_selection);
             create_dropdown_selection.appendChild(dropdown_recieve_option); 
             create_dropdown_selection.appendChild(dropdown_send_option);
