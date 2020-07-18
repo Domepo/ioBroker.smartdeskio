@@ -51,8 +51,6 @@ window.addEventListener("load",function(){
 
         var rcsn_listener = document.getElementById("recieve_or_send");
 
-
-
         rcsn_listener.addEventListener("change",  ()=>  {
 
             if (document.getElementById("recieve_or_send").value == "rc") {
@@ -61,10 +59,10 @@ window.addEventListener("load",function(){
                // document.getElementById("radio-recieve-button-id").disabled = false;
 
                 // provide infinte Loop
-                const removeClass = (elms) => elms.forEach(el => el.remove());
-                removeClass(document.querySelectorAll(".master-id-class") );
-                removeClass(document.querySelectorAll(".filter_div_style") );
-                removeClass(document.querySelectorAll(".more_class") );
+                                // const removeClass = (elms) => elms.forEach(el => el.remove());
+                                // removeClass(document.querySelectorAll(".master-id-class") );
+                                // removeClass(document.querySelectorAll(".filter_div_style") );
+                                // removeClass(document.querySelectorAll(".more_class") );
 
                 callback();
                 // Disable a repeat button press
@@ -76,11 +74,11 @@ window.addEventListener("load",function(){
                 // document.getElementById("master-id-id").style.display = "none";
 
                 // }
-                const removeClass = (elms) => elms.forEach(el => el.remove());
-                removeClass(document.querySelectorAll(".master-id-class") );
-                removeClass(document.querySelectorAll(".filter_div_style") );
-                removeClass(document.querySelectorAll(".more_class") );
-                console.log("SEND");
+                                // const removeClass = (elms) => elms.forEach(el => el.remove());
+                                // removeClass(document.querySelectorAll(".master-id-class") );
+                                // removeClass(document.querySelectorAll(".filter_div_style") );
+                                // removeClass(document.querySelectorAll(".more_class") );
+                                // console.log("SEND");
             }
         
         });
