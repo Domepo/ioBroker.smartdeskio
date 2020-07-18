@@ -102,7 +102,9 @@ window.addEventListener("load",function(){
             bracket                 = document.createElement("br");
 
         
-        field_for_id_and_master.setAttribute("class","master-id-class");    
+        // field_for_id_and_master.setAttribute("class","master-id-class");  
+        field_for_id_and_master.setAttribute("class","value");    
+
         field_for_id_and_master.setAttribute("id","master-id-id"+counter);   
         
         label_for_id_field.setAttribute("for","master_id_field"+counter);
