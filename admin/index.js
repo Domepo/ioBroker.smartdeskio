@@ -51,7 +51,7 @@ window.addEventListener("load",function(){
 
         var rcsn_listener = document.getElementById("recieve_or_send");
 
-        rcsn_listener.addEventListener("change",  ()=>  {
+        rcsn_listener.addEventListener("click",  ()=>  {
 
             if (document.getElementById("recieve_or_send").value == "rc") {
 
