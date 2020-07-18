@@ -24,50 +24,48 @@ window.addEventListener("load",function(){
     function create_radio_box(){
 
         
-        var create_div_for_radio_box    = document.createElement("div"),    
-            radio_send_button           = document.createElement("input"),
-            radio_recieve_button        = document.createElement("input"),
-            label_for_send_button       = document.createElement("label"),
-            label_for_recieve_button    = document.createElement("label");
+        var create_dropdown_for_recieve_send    = document.createElement("div"), 
+            create_dropdown_selection           = document.createElement("select"),   
+            dropdown_recieve_option             = document.createElement("option"),
+            dropdown_send_option                = document.createElement("option"),
+            dropdown_label                      = document.createElement("label");
+
+            create_dropdown_for_recieve_send.setAttribute("class","input-field col s12");
+
+            create_dropdown_selection.setAttribute("id","recieve_or_send");
+            create_dropdown_selection.setAttribute("class","recieve_or_send_value");
+
+            dropdown_recieve_option.setAttribute("value","rc");
+
+            dropdown_send_option.setAttribute("value","sn");
+
+            dropdown_label.setAttribute("class","translate");
+            dropdown_label.setAttribute("for","recieve_or_send")
 
 
-        create_div_for_radio_box.setAttribute("id","radio-boxes");
-        create_div_for_radio_box.setAttribute("class","value");
-
-        radio_send_button.setAttribute("type","radio");
-        radio_recieve_button.setAttribute("type","radio");
-
-        radio_recieve_button.setAttribute("name","recieve_and_send_radio");
-        radio_send_button.setAttribute("name","recieve_and_send_radio");
-
-        radio_send_button.setAttribute("id","radio-send-button-id");
-        radio_recieve_button.setAttribute("id","radio-recieve-button-id")
-
-        label_for_send_button.setAttribute("for","radio_send_button");
-        label_for_recieve_button.setAttribute("for","radio_recieve_button");
-
-        can_frontend_io.appendChild(create_div_for_radio_box); 
-        create_div_for_radio_box.appendChild(label_for_send_button);
-        create_div_for_radio_box.appendChild(radio_send_button); 
-        create_div_for_radio_box.appendChild(label_for_recieve_button);
-        create_div_for_radio_box.appendChild(radio_recieve_button);
+            document.body.appendChild(create_dropdown_for_recieve_send); 
+            create_dropdown_for_recieve_send.appendChild(create_dropdown_selection);
+            create_dropdown_selection.appendChild(dropdown_recieve_option); 
+            create_dropdown_selection.appendChild(dropdown_send_option);
+            create_dropdown_selection.appendChild(dropdown_label);
 
 
-
-        label_for_send_button.innerHTML = "Receive";
-        label_for_recieve_button.innerHTML = "Send";
+        dropdown_recieve_option.innerHTML = "Recieve";
+        dropdown_send_option.innerHTML    = "Send";
     }
     //get input data
     function get_radio_data(callback){
 
-        var box_listener = document.getElementById("radio-boxes");
+        var rcsn_listener = document.getElementById("recieve_or_send");
 
-        box_listener.addEventListener("click",  ()=>  {
 
-            if (document.getElementById("radio-recieve-button-id").checked == false) {
+
+        rcsn_listener.addEventListener("change",  ()=>  {
+
+            if (document.getElementById("recieve_or_send").value == "rc") {
 
               //reactivate radio button
-                document.getElementById("radio-recieve-button-id").disabled = false;
+               // document.getElementById("radio-recieve-button-id").disabled = false;
 
                 // provide infinte Loop
                 const removeClass = (elms) => elms.forEach(el => el.remove());
@@ -77,12 +75,10 @@ window.addEventListener("load",function(){
 
                 callback();
                 // Disable a repeat button press
-                document.getElementById("radio-send-button-id").disabled = true;
 
             }
-            if (document.getElementById("radio-send-button-id").checked == false) {
+            if (document.getElementById("recieve_or_send").value == "sn") {
   
-                document.getElementById("radio-send-button-id").disabled = false;
                 // if ( document.getElementById("master-id-id") != null)   {
                 // document.getElementById("master-id-id").style.display = "none";
 
@@ -92,7 +88,6 @@ window.addEventListener("load",function(){
                 removeClass(document.querySelectorAll(".filter_div_style") );
                 removeClass(document.querySelectorAll(".more_class") );
                 console.log("SEND");
-                document.getElementById("radio-recieve-button-id").disabled = true;
             }
         
         });
