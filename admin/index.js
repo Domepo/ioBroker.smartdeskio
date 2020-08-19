@@ -51,10 +51,8 @@ window.addEventListener("load",function(){
 
         var rcsn_listener = document.getElementById("recieve_or_send");
 
-        // rcsn_listener.addEventListener("click",  ()=>  {
-            setInterval(() => {
-                
-
+        rcsn_listener.addEventListener("click",  ()=>  {
+            
 
             if (document.getElementById("recieve_or_send").value == "rc") {
 
@@ -84,8 +82,7 @@ window.addEventListener("load",function(){
                                 // console.log("SEND");
             }
         
-        // });
-    }, 100);
+        });
     }
     function create_id_name_master_field(counter){
 
