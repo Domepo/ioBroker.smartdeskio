@@ -48,7 +48,10 @@ class Smartdeskio extends utils.Adapter {
 
 
 
-	this.createStateAndSubscribe("Ordner1","ID12","Ordner für ID","Id12 Knopf");
+	this.createStateAndSubscribe(String(msg.id),String(firstByte),"Ordner für ID","String(jsons.data)");
+
+	await this.setStateAsync("Ordner1.1", { val: jsons.data, ack: true });
+
 
 			
 	} );
