@@ -9,11 +9,11 @@
 const utils = require("@iobroker/adapter-core");
 
 
-
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
 const can = require("socketcan");
+const { outputJSON } = require("fs-extra");
 // const { parse } = require("path");
 
 let channel = can.createRawChannel("can0", true);
@@ -41,32 +41,52 @@ class Smartdeskio extends utils.Adapter {
 		this.log.info("Der Bratan leauft");
 		const newLocal = "onMessage";
 		channel.addListener(newLocal, async (msg) => { 
-			var firstByte = parseInt(Array.from(msg.data)[0]);
+		var firstByte = parseInt(Array.from(msg.data)[0]);
 		
 		const bufl = Buffer.from(msg.data);
 		let jsons = bufl.toJSON();
 
-		await this.createOwnState("eins","zwei","test");
-		await this.createOwnState("drei","zwei","test");
 
-		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
-		this.subscribeStates("Results");
+
+	this.createStateAndSubscribe("Ordner1","ID12","Ordner für ID","Id12 Knopf");
+
+			
 	} );
 	}
-
-	async createOwnState(channel1,key,nameOfState){
-		const fullStateName = channel1+"."+key;   
-		await this.setObjectNotExistsAsync(fullStateName, {	
+	createStateAndSubscribe = function(channel1,key,nameOfChannel,nameOfState){
+		this.createChannel(channel1,nameOfChannel);
+		var sub = this.createState(channel1,key,nameOfState);
+		this.subscribeStates(sub);
+	}
+	createState = function(channel1,key,nameOfState){
+		var fullStateName = channel1+"."+key;   
+		this.log.info(fullStateName);
+		this.setObjectNotExists(fullStateName, {	
 			type: "state",
 			common: {
 				name: nameOfState,
 				type: "boolean",
-				role: "indicator",
+				role: "value",
 				read: true,
 				write: true,
 			},
 			native: {},
 		});
+		return fullStateName;
+	}
+
+	createChannel = function(channel1,nameOfChannel){
+		this.setObjectNotExists(channel1, {	
+		type: "channel",
+		common: {
+			name: nameOfChannel,
+			type: "boolean",
+			role: "info",
+			read: true,
+			write: true,
+		},
+		native: {},
+	});
 	}
 	
 
