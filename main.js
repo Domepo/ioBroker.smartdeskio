@@ -19,6 +19,7 @@ const { outputJSON } = require("fs-extra");
 let channel = can.createRawChannel("can0", true);
 
 class Smartdeskio extends utils.Adapter {
+
 	/**
 	 * @param {Partial<utils.AdapterOptions>} [options={}]
 	 */
@@ -48,13 +49,16 @@ class Smartdeskio extends utils.Adapter {
 
 
 
-	this.createStateAndSubscribe(String(msg.id),String(firstByte),"Ordner für ID","String(jsons.data)");
+	this.createStateAndSubscribe(String(msg.id),firstByte,"Ordner für ID","String");
 
-	await this.setStateAsync("Ordner1.1", { val: jsons.data, ack: true });
+	await this.setStateAsync(this.inputState(String(msg.id),firstByte), { val: jsons["data"], ack: true });
 
 
 			
 	} );
+	}
+	inputState = function(a,b){
+		return a+"."+b;
 	}
 	createStateAndSubscribe = function(channel1,key,nameOfChannel,nameOfState){
 		this.createChannel(channel1,nameOfChannel);
